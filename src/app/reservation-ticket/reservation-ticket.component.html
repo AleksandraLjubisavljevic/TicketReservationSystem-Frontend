@@ -1,0 +1,46 @@
+<div class="main-info">
+  <h1 class="main-heading">
+  Rezervišite Vašu kartu
+  </h1>
+  <div class="concert-info" *ngIf="concert">
+    <h2 class="sub-heading">{{ getConcertNamePart1(concert.name) }}<br><br>{{ getConcertNamePart2(concert.name) }}</h2>
+    <div class="time-place">
+      <p class="info">{{ concert.date|customDate }} <br><br> {{ concert.location }} <br><br> {{ concert.city }}</p>
+    </div>
+  </div>
+</div>
+<mat-stepper [linear]="true" [formGroup]="stepperForm" #stepper>
+  <mat-step>
+    <ng-template matStepLabel>Izaberite broj karata:</ng-template>
+    <div class="stepper-controls">
+      <app-zone></app-zone>
+      <div class="controlButtons">
+        <button mat-button class="cancel-button" (click)="onBack()">Otkaži</button>
+        <button mat-button class="continue-button" (click)="stepper.next()">Nastavi ></button>
+      </div>
+    </div>
+  </mat-step>
+  <mat-step>
+    <ng-template matStepLabel>Promo kod</ng-template>
+    <app-promocode></app-promocode>
+    <div class="controlButtons">
+      <button mat-button class="cancel-button" (click)="stepper.previous()"> < Prethodno</button>
+      <button mat-button class="continue-button" (click)="stepper.next()">Nastavi ></button>
+    </div>
+  </mat-step>
+  <mat-step>
+    <ng-template matStepLabel>Informacije o korisniku:</ng-template>
+    <div class="stepper-controls">
+      <app-customer></app-customer>
+      <div class="controlButtons">
+        <button mat-button class="cancel-button" (click)="stepper.previous()">< Prethodno</button>
+        <button mat-button class="continue-button"(click)="onSubmit()">Rezerviši</button>
+      </div>
+    </div>
+  </mat-step>
+</mat-stepper>
+
+
+
+
+

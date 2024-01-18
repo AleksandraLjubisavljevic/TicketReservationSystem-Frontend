@@ -1,0 +1,17 @@
+<div class="card">
+  <div class="card-img-wrapper">
+    <img class="card-img-top" [src]="getConcertImagePath(concert.concertId)" [alt]="concert.name" >
+    <ul class="list-inline text-center member-icons animate">
+      <li class="list-inline-item">
+        <button class="btn btn-primary" routerLink="/concert/{{concert.concertId}}"><i class="fas fa-folder-plus"></i></button>
+      </li>
+    </ul>
+    </div>
+    <div class="card-body p-1">
+    <h1>{{concert.name}}</h1>
+    <div class="timeplace">
+      <p class="prop-info">{{concert.date|customDate}} | {{concert.location}}, {{concert.city}}</p>
+      <button type="button" (click)="openPageForReservation(concert.concertId)">Rezervišite karte ></button>
+    </div>
+  </div>
+  </div>

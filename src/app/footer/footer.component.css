@@ -1,0 +1,65 @@
+footer {
+  position: static;
+  width: 100%;
+  text-align: center;
+  background-color: black;
+  border-top: 2px solid blue;
+  color:lightgray;
+  opacity: 0.8;
+  font-size: 2vw;
+  padding-top: 20px;
+  font-family: Oleo Script Swash Caps;
+}
+
+ .copyright {
+  text-align:center;
+  padding-top:24px;
+  opacity:0.4;
+  font-size:1.5vw;
+  padding-bottom: 10px;
+}
+.social-icons{
+  padding-top: 10px;
+}
+.social-icons img {
+  box-shadow: inset -1px -1px 2px lightgray(0, 0, 0),
+    2px 2px 5px lightgray(0, 0, 0);
+  transition: 0.5s;
+  border-radius: 50%;
+  width: 4vw;
+  height: 4vw;
+}
+
+.social-icons img:hover {
+  transform: translateY(-20px);
+  box-shadow: inset -1px -1px 2px rgba(0, 0, 0, 0.5),
+    2px 24px 10px rgba(0, 0, 0, 0.397);
+    width: 4vw;
+  height: 4vw;
+}
+
+.subscribe {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  font-size: 1.5vw;
+  font-family: Oleo Script Swash Caps;
+  padding: 5px;
+}
+
+.subscribe form {
+  text-align: center;
+}
+
+.subscribe label {
+  display: block;
+  margin-bottom: 5px;
+  margin-top: 20px;
+}
+
+.subscribe input {
+  border: 2px solid #050505;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+

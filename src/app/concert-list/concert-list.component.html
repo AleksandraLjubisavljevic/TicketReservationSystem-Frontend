@@ -1,0 +1,29 @@
+<div class="title">
+  <div class="first-name">EROS</div>
+  <div class="last-name">RAMAZZOTTI</div> <br>
+  <div class="tour">BATTITO INFINITO WORLD TOUR</div>
+</div>
+<div class="filter-and-sort">
+  <label>Filtrirajte koncerte: &nbsp; </label>
+  <input [(ngModel)]='Concert'>
+  <button type="button" (click)="onConcertFilter()">Pretraži</button>
+  <button type="button" (click)="onConcertFilterClear()">Obriši</button> &nbsp;
+
+  <label>Sortirajte &nbsp;</label>
+  <select [(ngModel)] = 'SortbyParam'>
+    <option value="city">Grad</option>
+    <option value="date">Datum</option>
+  </select>
+  <button type="button" (click) = "onSortDirection()">
+    <i *ngIf="SortDirection==='asc'" class="fas fa-sort-alpha-down"></i>
+    <i *ngIf="SortDirection==='desc'" class="fas fa-sort-alpha-up"></i>
+  </button>
+</div>
+<div class="row">
+  <div *ngFor="let concert of concerts| filter:SearchConcert:'city'|sort:[SortbyParam,SortDirection]" class="col-sm-4">
+      <div class="shadow-lg p-3 mb-4">
+        <app-concert-card [concert]="concert">
+        </app-concert-card>
+    </div>
+  </div>
+</div>

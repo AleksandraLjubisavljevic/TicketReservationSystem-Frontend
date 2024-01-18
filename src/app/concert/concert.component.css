@@ -1,0 +1,83 @@
+.concert-info{
+  background-color: lightgray;
+}
+h1{
+  text-align: center;
+  padding: 10% 0% 0% 10%;
+  font-size: 4.5vw;
+  font-family: Oleo Script Swash Caps;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  color:blue;
+  font-weight: bold;
+  -webkit-text-fill-color: black;
+  -webkit-text-stroke-width: 0.5px;
+}
+h2{
+  font-variant-caps: all-petite-caps;
+  text-align: center;
+  font-family: Oleo Script Swash Caps;
+  font-size: 2.5vw;
+}
+.info{
+  display: block;
+  margin: auto;
+  margin-top: 120px;
+  width: 50%;
+  padding: 0 0 3% 0;
+}
+.images {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 50px;
+  padding-left: 10px;
+  padding-top: 70px;
+  padding-bottom: 100px;
+}
+
+.img-erros {
+  border: 1px solid black;
+  background-color: black;
+  margin-right: 20px;
+}
+
+button {
+  display: block;
+  margin: 0 auto;
+  font-family: Oleo Script Swash Caps;
+  font-size: 18px;
+  color: white;
+  background-color: black;
+  border: 2px solid black;
+  border-radius: 5px;
+  padding: 10px 20px;
+}
+button:hover{
+  display: block;
+  margin: 0 auto;
+  font-family: Oleo Script Swash Caps;
+  font-size: 18px;
+  color: white(107, 30, 30);
+  background-color: rgb(52, 79, 128);
+  border: 2px solid black;
+  border-radius: 5px;
+  padding: 10px 20px;
+}
+.timeplace{
+  display: block;
+  margin: 0 auto;
+  font-family: Oleo Script Swash Caps;
+  font-size: 28px;
+  border: 2px solid black;
+  border-radius: 5px;
+  text-align: center;
+  width: 50%;
+  padding: 20px 20px;
+  margin-bottom: 5vw;
+  background-color: white;
+}
+.prop-info{
+  margin-top:30px;
+  margin-bottom:30px;
+}
+

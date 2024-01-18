@@ -1,0 +1,15 @@
+<div class="form-group col-12" [formGroup]="promocodeForm">
+  <div class="stepper-controls">
+    <label for="promocode" class="form-label">Unesite promo kod:</label>
+    <span class="optional-field">Nije obavezno polje</span>
+    <input matInput type="string" formControlName="promocode" class="form-input">
+    <button  (click)="onSubmit();" class="form-button">OK</button>
+
+  </div>
+  <div class="total-amount-box">
+  <label class="totalAmount "for="totalAmount">UKUPNO:</label>
+    <span>{{ totalAmount }}</span>
+  </div>
+</div>
+
+

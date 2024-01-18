@@ -1,0 +1,188 @@
+.main {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: lightgray;
+}
+.form-group {
+  max-width: 500px;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #080808;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.card{
+  margin-top: 100px;
+  padding: 10px;
+  font-family: Oleo Script Swash Caps;
+  font-size: 18px;
+  background-color: rgb(255, 254, 254);
+  width: 70%;
+  margin-bottom: 100px;
+  border: 1px solid black;
+}
+h1{
+  font-size: 40px;
+  text-align: center;
+  margin-top: 40px;
+  font-weight: bold;
+  font-family: Oleo Script Swash Caps;
+  text-transform: uppercase;
+  color:blue;
+  -webkit-text-fill-color: black;
+  -webkit-text-stroke-width: 0.5px;
+}
+h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  font-weight: bold;
+  font-family: Oleo Script Swash Caps;
+  text-transform: uppercase;
+}
+h2, p {
+  text-align: center;
+}
+.flex-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+.select-wrapper,
+.button-wrapper {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.select-wrapper select {
+  width: 100%;
+}
+
+.button-wrapper button{
+  background-color: #000;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 3px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.button-wrapper button:hover, .controlButtons button:hover {
+  background-color: #333;
+}
+.totalAmount{
+  padding-top: 10px;
+}
+
+.controlButtons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* Vertically center the buttons */
+  margin-top: 20px;
+}
+
+.cancel-button {
+  background-color: #000;
+  color: #fff;
+  border: none;
+  padding: 7px 15px;
+  border-radius: 3px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.change-button {
+  background-color: #000;
+  color: #fff;
+  border: none;
+  padding: 7px 15px;
+  border-radius: 3px;
+  font-size:20px;
+  cursor: pointer;
+  align-items: right;
+}
+/* Add a media query for smaller screens */
+@media (max-width: 768px) {
+  .form-control,
+  .select-wrapper select,
+  .button-wrapper button {
+    font-size: 14px;
+  }
+}
+
+.form-group label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.form-control {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  font-size: 16px;
+}
+
+.error-block {
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+.ticket-table {
+  margin-top: 20px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid #090909;
+  background-color: white;
+}
+
+table th,
+table td {
+  padding: 8px;
+  border: 1px solid #0f0f0f;
+  text-align: left;
+}
+
+table th {
+  background-color: #f2f2f2;
+  font-weight: bold;
+}
+
+table td button {
+  background-color: #dc3545;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 3px;
+  font-size: 14px;
+  cursor: pointer;
+  margin-right: 5px;
+}
+
+
+
+/* Add a media query for smaller screens */
+@media (max-width: 768px) {
+  table th,
+  table td {
+    font-size: 12px;
+    padding: 6px;
+  }
+
+  table td button {
+    font-size: 12px;
+  }
+}

@@ -1,0 +1,45 @@
+
+button {
+  font-family: Oleo Script Swash Caps;
+  font-size: 18px;
+  color: white;
+  background-color: black;
+}
+.shadow-lg{
+  border: 1.5px solid black;
+}
+.filter-and-sort{
+  font-family: Oleo Script Swash Caps;
+  margin:15px;
+  font-size:18px;
+}
+.title{
+  background-color: lightgray;
+  text-align: center;
+  letter-spacing: 1em;
+  border-bottom: 1px solid blue;
+}
+.first-name{
+  padding-top: 10%;
+  font-size: 5vw;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  color:blue;
+  -webkit-text-fill-color: black;
+  -webkit-text-stroke-width: 0.5px;
+}
+.last-name{
+  padding-top: 3%;
+  font-size: 4vw;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  color:blue;
+  -webkit-text-fill-color: black;
+  -webkit-text-stroke-width: 0.5px;
+}
+.tour{
+  padding-top: 3%;
+  font-size: 3vw;
+  font-family:Oleo Script Swash Caps;
+  padding-bottom: 7%;
+  font-weight: bold;
+}
+

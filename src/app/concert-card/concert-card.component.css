@@ -1,0 +1,105 @@
+
+.concert-info{
+  background-color: lightgray;
+}
+h1{
+  text-align: center;
+  padding: 10% 0% 0% 10%;
+  font-size: 1.5vw;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  letter-spacing: 0.05em;
+}
+h2{
+  font-variant-caps: all-petite-caps;
+  text-align: center;
+  font-family: Oleo Script Swash Caps;
+  font-size: 1vw;
+}
+.info{
+  display: block;
+  margin: auto;
+  margin-top: 170px;
+  width: 50%;
+  padding: 0 0 3% 0;
+}
+.img-erros{
+  display: block;
+  margin: auto;
+  border: 2px solid black;
+}
+button {
+  display: block;
+  margin: 0 auto;
+  font-family: Oleo Script Swash Caps;
+  font-size: 18px;
+  color: white;
+  background-color: black;
+  border: 2px solid black;
+  border-radius: 5px;
+  padding: 10px 20px;
+}
+button:hover{
+  display: block;
+  margin: 0 auto;
+  font-family: Oleo Script Swash Caps;
+  font-size: 18px;
+  color: white(107, 30, 30);
+  background-color: darkslategrey;
+  border: 2px solid black;
+  border-radius: 5px;
+  padding: 10px 20px;
+}
+.timeplace{
+  display: block;
+  margin: 0 auto;
+  font-family: Oleo Script Swash Caps;
+  font-size: 28px;
+  text-align: center;
+  width: 50%;
+  padding: 20px;
+  margin-bottom: 5vw;
+  background-color: white;
+  letter-spacing: 0.1em;
+}
+.prop-info{
+  margin-top:30px;
+  margin-bottom:30px;
+}
+.card-img-wrapper{
+  overflow: hidden;
+  position: relative;
+}
+
+.card:hover img{
+  transform: scale(1.2,1.2);
+  transition-duration: 500ms;
+  transition-timing-function: ease-out;
+  height: 250px;
+  opacity: .7;
+}
+
+.card img{
+  transform: scale(1,1);
+  transition-duration: 500ms;
+  transition-timing-function: ease-out;
+  height: 250px
+}
+
+.member-icons{
+  position: absolute;
+  bottom: -10%;
+  left: 0;
+  right: 0;
+  margin-right: auto;
+  margin-left: auto;
+  opacity: 0;
+}
+
+.card-img-wrapper:hover .member-icons{
+  bottom: 0;
+  opacity: 1;
+}
+
+.animate{
+  transition: all 0.3s ease-in-out;
+}

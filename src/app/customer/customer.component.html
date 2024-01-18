@@ -1,0 +1,98 @@
+<div class="card">
+  <div class="card-header">
+    Podaci o kupcu
+  </div>
+  <div class="card-body">
+  <form [formGroup]="userForm">
+    <div class="cart-option">
+      <div style="display:flex;">
+        <div style="width:calc(50% - 2px);">
+          <div class="form-el">
+          	<label for="firstName" class="mustBeEntered">Ime*</label>
+            <input type="text" class="form-control"formControlName="firstName">
+            <span *ngIf="!firstName.valid && (firstName.touched || usersubmitted)"class="error-block">
+              Unesite ime
+            </span>
+          </div>
+          <div class="form-el">
+            <label class="mustBeEntered" for="lastName">Prezime*</label>
+            <input type="text" formControlName="lastName" class="form-control">
+            <span *ngIf="!lastName.valid && (lastName.touched || usersubmitted)" class="error-block">
+              Unesite prezime
+            </span>
+          </div>
+          <div class="form-el">
+            <label class="possibleToEnter" for="company">Kompanija</label>
+            <input type="text" formControlName="company" class="form-control">
+          </div>
+          <div class="form-el">
+            <label class="mustBeEntered" for="address1">Adresa1*</label>
+            <input type="text" formControlName="address1"  class="form-control">
+            <span *ngIf="!address1.valid && (address1.touched || usersubmitted)" class="error-block">
+              Unesite adresu
+            </span>
+          </div>
+          <div class="form-el">
+            <label class="possibleToEnter" for="address2">Adresa2</label>
+            <input type="text" formControlName="address2" class="form-control">
+          </div>
+        </div>
+        <div style="width:calc(50% - 2px);">
+          <div class="form-el">
+            <label class="mustBeEntered" for="postalCode">Poštanski broj*</label>
+            <input type="text" formControlName="postalCode" class="form-control">
+            <span *ngIf="!postalCode.valid && (postalCode.touched || usersubmitted)" class="error-block">
+              Unesite poštanski broj
+            </span>
+          </div>
+          <div class="form-el">
+            <label class="mustBeEntered" for="city">Mesto*</label>
+            <input type="text" formControlName="city" class="form-control">
+            <span *ngIf="!city.valid && (city.touched || usersubmitted)" class="error-block">
+              Unesite mesto
+            </span>
+          </div>
+          <div class="form-el">
+            <label class="mustBeEntered" for="country">Država*</label>
+            <input type="text" formControlName="country" class="form-control">
+            <span *ngIf="!country.valid && (country.touched || usersubmitted)" class="error-block">
+              Unesite državu
+            </span>
+          </div>
+          <div class="form-el">
+            <label class="mustBeEntered" for="email">Email*</label>
+            <input type="text" formControlName="email" class="form-control">
+            <span *ngIf="!email.valid && (email.touched || usersubmitted)" class="error-block">
+              <span *ngIf="email.hasError('required')">
+                  Unesite email
+              </span>
+              <span *ngIf="email.hasError('email')">
+                Unesite email u odgovarajućem formatu
+              </span>
+            </span>
+          </div>
+          <div class="form-el">
+            <label class="mustBeEntered" for="confirmEmail">Potvrdite email*</label>
+            <input type="text" formControlName="confirmEmail" class="form-control">
+            <span  *ngIf="!confirmEmail.valid && (confirmEmail.touched || usersubmitted)" class="error-block">
+              <span *ngIf="confirmEmail.hasError('required')">
+                Molim Vas potvrdite mejl
+              </span>
+            </span>
+              <span *ngIf="userForm.hasError('notmatched') && confirmEmail.valid">
+                Ne podudaraju se email-ovi
+              </span>
+          </div>
+        </div>
+
+      </div>
+      <div class="right-info">
+        <p>*-obavezna polja</p>
+        <button class="confirm-button" (click)="onSubmit()">Potvrdite podatke</button>
+      </div>
+    </div>
+  </form>
+</div>
+</div>
+
+

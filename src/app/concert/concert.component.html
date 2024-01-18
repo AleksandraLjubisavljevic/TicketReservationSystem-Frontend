@@ -1,0 +1,20 @@
+<div class="concert-info">
+  <h1><b>{{ getConcertNamePart1(concert?.name) }}<br><br>{{ getConcertNamePart2(concert?.name) }}</b></h1>
+  <div class="info">
+    <h2>{{concert?.additionalInfo}}</h2>
+  </div>
+  <div class="timeplace">
+    <a *ngIf="concert?.concertId === 1" href="https://www.google.com/maps/place/%D0%A8%D1%82%D0%B0%D1%80%D0%BA+%D0%90%D1%80%D0%B5%D0%BD%D0%B0/@44.814146,20.4164185,17z/data=!3m1!4b1!4m6!3m5!1s0x475a6561a8c27169:0x81b82df6278d741a!8m2!3d44.8141461!4d20.4212894!16zL20vMDdsODNk" target="_blank">
+      <img class="img-logo" alt="Štark arena logo" src="./assets/stark.jpg" height="70" width="170">
+    </a>
+    <p class="prop-info">{{concert?.date|customDate}} | {{concert?.location}}, {{concert?.city}}</p>
+    <button type="button" (click)="openPageForReservation(concert?.concertId)">Rezervišite karte ></button>
+  </div>
+  <div class="images">
+    <img class="img-erros" alt="Eros Ramazzotti" src="./assets/background.jpg" height="350" width="450" >
+    <img class="img-erros" alt="Eros Ramazzotti" src="./assets/er2.webp" height="350" width="450" >
+    <img class="img-erros" alt="Eros Ramazzotti" [src]="getConcertImagePath(concert?.concertId)" height="350" width="450">
+
+  </div>
+</div>
+

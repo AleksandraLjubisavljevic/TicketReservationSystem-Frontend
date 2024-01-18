@@ -1,0 +1,13 @@
+<div class="dialog">
+  <div class="dialog-header">
+    <button mat-icon-button (click)="closeDialog()">
+      <mat-icon>close</mat-icon>
+    </button>
+  </div>
+  <div class="dialog-content">
+    <h2>Uspešno ste rezervisali karte!</h2>
+    <p><b>Sačuvajte token za pristup rezervaciji: </b>{{ data.token }}</p>
+    <p><b>Generisani promokod:</b>{{ data.promoCode }}</p>
+    <button mat-dialog-close color="primary">Zatvorite</button>
+  </div>
+</div>

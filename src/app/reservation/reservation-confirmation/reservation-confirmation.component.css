@@ -1,0 +1,61 @@
+.dialog{
+  border: 2px solid rgb(37, 135, 33);
+  background-color: rgb(175, 216, 175);
+}
+.dialog-content {
+  padding: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #ccc #f0f0f0;
+
+}
+.dialog-header {
+  display: flex;
+  justify-content: flex-end;
+}
+
+
+.dialog-header button {
+  background-color: transparent;
+  color: #000;
+  cursor: pointer;
+  font-size: 10px;
+  outline: none;
+}
+
+.dialog-header button:hover {
+  color: #333;
+}
+
+.dialog-content:hover {
+  scrollbar-color: #999 #f0f0f0;
+}
+
+h2{
+  text-transform: uppercase;
+  font-size: 24px;
+  font-family:Oleo Script Swash Caps ;
+  text-align: center;
+  font-weight: bold;
+}
+p {
+  font-size: 16px;
+  margin-bottom: 10px;
+  font-family:Oleo Script Swash Caps ;
+}
+
+button {
+  background-color: #000;
+  color: #fff;
+  border: 1px solid rgb(37, 135, 33);
+  padding: 8px 16px;
+  border-radius: 3px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #333;
+}
+

@@ -1,0 +1,128 @@
+
+.reservation-lookup {
+  max-width: 400px;
+  margin: 40px auto 100px auto;
+  text-align: center;
+}
+.card{
+  margin-top: 100px;
+  padding: 10px;
+  font-family: Oleo Script Swash Caps;
+  font-size: 18px;
+  border-color: black;
+}
+
+h2 {
+  font-size: 26px;
+  margin-bottom: 20px;
+  font-weight: bold;
+  font-family: Oleo Script Swash Caps;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+label.mustBeEntered {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+input.form-control {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid black;
+  border-radius: 4px;
+}
+
+.error-block {
+  color: red;
+  font-size: 14px;
+  display: block;
+  margin-top: 5px;
+}
+
+button.btn-primary {
+  background-color: black;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 10px 20px;
+  cursor: pointer;
+  float: right;
+  margin-top: 10px;
+  font-family: Oleo Script Swash Caps;
+}
+
+button.btn-primary:hover, .button-wrapper {
+  background-color: #333;
+}
+.button-wrapper{
+  background-color: black;
+  color: white;
+  border: 2px solid black;
+  border-radius: 4px;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-family: Oleo Script Swash Caps;
+}
+.reservation-lookup::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+@media (max-width: 768px) {
+  input.form-control {
+    width: 80%;
+  }
+}
+
+
+.ticket-table {
+  margin-top: 20px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid black;
+}
+
+table th,
+table td {
+  padding: 8px;
+  border: 1px solid black;
+  text-align: left;
+}
+
+table th {
+  background-color: #f2f2f2;
+  font-weight: bold;
+}
+
+table td button {
+  background-color: #dc3545;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 3px;
+  font-size: 14px;
+  cursor: pointer;
+  margin-right: 5px;
+}
+
+@media (max-width: 768px) {
+  table th,
+  table td {
+    font-size: 12px;
+    padding: 6px;
+  }
+
+  table td button {
+    font-size: 12px;
+  }
+}

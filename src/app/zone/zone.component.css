@@ -1,0 +1,148 @@
+.form-group {
+  max-width: 500px;
+  margin: auto;
+  padding: 20px;
+  border: 1.5px solid black;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.select-wrapper,
+.button-wrapper {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.select-wrapper select {
+  width: 100%;
+}
+
+.button-wrapper button{
+  background-color: #000;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 3px;
+  font-size: 14px;
+  cursor: pointer;
+}
+.controlButtons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.cancel-button {
+  background-color: #000;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 3px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.continue-button {
+  background-color: #000;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 3px;
+  font-size: 14px;
+  cursor: pointer;
+  align-items: right;
+}
+
+.controlButtons .continue-button {
+  margin-left: auto;
+}
+
+
+.button-wrapper button:hover,
+.controlButtons button:hover {
+  background-color: #333;
+}
+
+.totalAmount{
+  padding-top: 10px;
+}
+
+@media (max-width: 768px) {
+  .form-control,
+  .select-wrapper select,
+  .button-wrapper button {
+    font-size: 14px;
+  }
+}
+
+.form-group label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.form-control {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  font-size: 16px;
+}
+
+.error-block {
+  font-size: 12px;
+  margin-top: 5px;
+}
+.ticket-table {
+  margin-top: 20px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid #ccc;
+}
+
+table th,
+table td {
+  padding: 8px;
+  border: 1px solid #ccc;
+  text-align: left;
+}
+
+table th {
+  background-color: #f2f2f2;
+  font-weight: bold;
+}
+
+table td button {
+  background-color: #dc3545;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 3px;
+  font-size: 14px;
+  cursor: pointer;
+  margin-right: 5px;
+}
+
+
+
+/* Add a media query for smaller screens */
+@media (max-width: 768px) {
+  table th,
+  table td {
+    font-size: 12px;
+    padding: 6px;
+  }
+
+  table td button {
+    font-size: 12px;
+  }
+}
+

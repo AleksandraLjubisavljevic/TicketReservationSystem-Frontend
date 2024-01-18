@@ -1,0 +1,60 @@
+<div class="reservation-lookup">
+  <h2>Pretraži rezervaciju</h2>
+  <form  [formGroup]="myReservationForm" (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <label class="mustBeEntered" for="email">Email:</label>
+        <input type="email"  formControlName="email" class="form-control" required>
+        <span *ngIf="!myReservationForm.get('email').valid && myReservationForm.get('email').touched" class="error-block">
+          <span *ngIf="myReservationForm.get('email').hasError('required')">
+            Unesite email
+          </span>
+          <span *ngIf="myReservationForm.get('email').hasError('email')">
+            Unesite email u odgovarajućem formatu
+          </span>
+        </span>
+      </div>
+      <div class="form-group">
+        <label for="token" class="mustBeEntered">Token:</label>
+        <input type="text" id="token" formControlName="token" class="form-control" required>
+        <span *ngIf="!myReservationForm.get('token').valid && myReservationForm.get('token').touched" class="error-block">
+          <span *ngIf="myReservationForm.get('token').hasError('required')">
+            Unesite token
+          </span>
+        </span>
+      </div>
+      <button type="submit" class="btn btn-primary">Pretraga</button>
+    </form>
+  <div class="card" *ngIf="show == true">
+    <h2>Pregled rezervacije</h2>
+    <p>Koncert: {{ reservation.Concert.Name}} {{ reservationData.Concert.City }} {{ reservationData.Concert.Location }}</p>
+    <p>Datum rezervacije: {{reservation.ReservationDate | customDate}}</p>
+    <p>Ime: {{ reservationData.Customer.FirstName }}</p>
+    <p>Prezime: {{ reservationData.Customer.LastName }}</p>
+    <p>Email: {{ reservationData.Customer.Email }}</p>
+    <h2>Pregled karata:</h2>
+    <div class="ticket-table">
+    <table>
+      <thead>
+        <tr>
+          <th>Izabrana zona</th>
+          <th>Cena karte</th>
+          <th>Broj karata</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let ticket of reservationData.Tickets">
+          <td>{{ ticket.ZoneData.Name }}</td>
+          <td>{{ticket.ZoneData.Price}}</td>
+          <td>{{ ticket.Quantity }}</td>
+      </tr>
+    </tbody>
+    </table>
+  </div>
+  <p>Ukupna cena: {{ reservation.TotalPrice }}</p>
+  <div class="buttons-wrapper">
+  <button class="buttonUpdate" (click)="OpenPageForAlterReservation()">Izmeni</button>
+  <button class="buttonDelete" (click)="OpenDialog(reservation.ReservationId)">Obrisi</button>
+</div>
+</div>
+</div>
+

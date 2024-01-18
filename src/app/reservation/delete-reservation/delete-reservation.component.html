@@ -1,0 +1,11 @@
+
+  <h1>Brisanje rezervacije!</h1>
+  <div>
+    <div class="text">
+      <p>Da li ste sigurni da želite da obrišete rezervaciju?</p>
+    </div>
+  </div>
+  <div class="controlButtons">
+    <button mat-dialog-close class="cancel-button" (click)="onBack()">Odustani</button>
+    <button class="delete-button" (click)="DeleteReservation(data.idRezervacija, data.token)">Obrisi</button>
+  </div>

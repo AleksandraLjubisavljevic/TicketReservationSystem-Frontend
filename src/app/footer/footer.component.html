@@ -1,0 +1,27 @@
+<footer>
+  <div class="social-media">
+    <p>Pratite aktuelnosti o koncertu</p>
+    <div class="social-icons">
+      <a href="https://www.instagram.com/ramazzotti_eros/?hl=en" target="_blank">
+        <img border="0" src="assets/instaaa.png" alt="instagram" class="img" />
+      </a>
+      <a href="https://www.facebook.com/ramazzotti.eros.official/" target="_blank">
+        <img border="0" src="assets/facebookkk.png" alt="facebook" class="img" />
+      </a>
+    </div>
+  </div>
+
+  <div class="subscribe">
+    <form (ngSubmit)="validateForm()">
+      <label for="email">Pretplatite se na našu mejling listu:</label>
+      <br>
+      <input type="email" id="email" name="email" placeholder="Unesite svoj email" [(ngModel)]="emailInput">
+      <input type="submit" id="submit" name="submit" value="Potvrdite">
+    </form>
+  </div>
+
+  <div class="copyright">
+    <p>Copyright Aleksandra Ljubisavljević © 2023</p>
+  </div>
+</footer>
+

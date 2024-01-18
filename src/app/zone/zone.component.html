@@ -1,0 +1,53 @@
+<div class="form-group col-12" [formGroup]="zoneForm">
+  <div class="select-wrapper">
+    <label for="zoneId">Zona sedenja</label>
+    <select class="form-control" formControlName="zoneId" (change)="onZoneSelected()">
+      <option value=''>Zona sedenja</option>
+      <option *ngFor="let zone of zones" [value]="zone.zoneId">
+        {{ zone.name }} | {{ zone.price }} din
+      </option>
+    </select>
+    <div class="error-block" *ngIf="zoneForm.controls['zoneId'].invalid && zoneForm.controls['zoneId'].touched">
+      Molimo Vas da izaberete zonu
+    </div>
+  </div>
+
+  <div class="select-wrapper">
+    <label for="numberOfCards">Broj karata u zoni:</label>
+    <input type="number" class="form-control" formControlName="numberOfCards" (input)="updateTotalAmount()">
+    <div class="error-block" *ngIf="zoneForm.controls['numberOfCards'].invalid && zoneForm.controls['numberOfCards'].touched">
+      Molimo Vas da unesete broj karata
+    </div>
+  </div>
+
+  <div class="button-wrapper">
+    <button (click)="handleAddAndCalculate()">Dodajte karte</button>
+  </div>
+  <div class="ticket-table">
+    <table>
+      <thead>
+        <tr>
+          <th>Zona</th>
+          <th>Cena karte</th>
+          <th>Broj karata</th>
+          <th>Obrisi</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let ticket of tickets; let i = index">
+          <td>{{ ticket.ZoneData.name  }}</td>
+          <td>{{ ticket.ZoneData.price}}</td>
+          <td>{{ ticket.Quantity }}</td>
+        <td>
+          <button class="delete-button" (click)="deleteTicket(i)"><mat-icon>delete</mat-icon></button>
+        </td>
+      </tr>
+    </tbody>
+    </table>
+  </div>
+  <br>
+  <label class="totalAmount "for="totalAmount">UKUPNO:</label>
+  <span>{{ totalAmount }}</span>
+</div>
+
+
